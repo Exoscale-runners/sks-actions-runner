@@ -6,7 +6,7 @@ resource "helm_release" "gha_runner_controller" {
   name             = "exo-arc"
   repository       = "oci://ghcr.io/actions/actions-runner-controller-charts"
   chart            = "gha-runner-scale-set-controller"
-  version          = "0.11.0"
+  version          = "0.12.1"
 
   values = [
     <<-EOT
@@ -27,7 +27,7 @@ resource "helm_release" "gha_runner_scale_set" {
   name             = var.gh_arc_installation_name
   repository       = "oci://ghcr.io/actions/actions-runner-controller-charts"
   chart            = "gha-runner-scale-set"
-  version          = "0.11.0"
+  version          = "0.12.1"
   set {
     name  = "githubConfigUrl"
     value = var.gha_org
