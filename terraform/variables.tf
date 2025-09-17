@@ -37,11 +37,6 @@ variable "workers_number" {
   default     = 1
 }
 
-variable "worker_type" {
-  type    = string
-  default = "standard.medium"
-}
-
 variable "zone" {
   type    = string
   default = "ch-gva-2"
@@ -59,10 +54,4 @@ variable "gha_org" {
   type    = string
   default = "https://github.com/Exoscale-runners"
 
-}
-
-# This variable define the name to be used to select the runner in workflow definition (runs-on: <gh_arc_installation_name>)
-variable "gh_arc_installation_name" {
-  type    = string
-  default = "exo-arc-runner"
 }
