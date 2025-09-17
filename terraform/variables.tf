@@ -34,7 +34,7 @@ variable "name" {
 variable "workers_number" {
   description = "Number of workers in node pool"
   type        = number
-  default     = 3
+  default     = 1
 }
 
 variable "worker_type" {
@@ -44,7 +44,7 @@ variable "worker_type" {
 
 variable "zone" {
   type    = string
-  default = "ch-dk-2"
+  default = "ch-gva-2"
 }
 
 ######################################################
@@ -57,7 +57,7 @@ variable "gha_token" {
 
 variable "gha_org" {
   type    = string
-  default = "https://github.com/bertrand-cachet"
+  default = "https://github.com/Exoscale-runners"
 
 }
 

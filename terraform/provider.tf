@@ -2,7 +2,7 @@ terraform {
   required_providers {
     exoscale = {
       source  = "exoscale/exoscale"
-      version = "~> 0.64.0"
+      version = "~> 0.65.1"
     }
   }
 }
@@ -13,7 +13,7 @@ provider "exoscale" {
 }
 
 provider "helm" {
-  kubernetes {
+  kubernetes = {
     config_path = local_sensitive_file.sks_kubeconfig_file.filename
   }
 }
