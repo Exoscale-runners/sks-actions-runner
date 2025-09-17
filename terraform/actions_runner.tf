@@ -18,9 +18,9 @@ resource "helm_release" "controller" {
 
 resource "helm_release" "runner" {
   depends_on = [
-    helm_release.gha_runner_controller
+    helm_release.controller
   ]
-  namespace        = "exo-arc-runners"
+  namespace        = "exo-arc-runner"
   create_namespace = true
   recreate_pods    = true
   reuse_values     = false
